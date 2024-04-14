@@ -1,0 +1,36 @@
+footer {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $color-100;
+  text-align: center;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+    h6 {
+      font-size: 30px;
+      color: $color-400;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .permlinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+    list-style: none;
+    li {
+      a {
+        color: $color-500;
+      }
+    }
+  }
+
+  .footer_copyright {
+    color: $color-400;
+  }
+}

@@ -1,0 +1,46 @@
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 10px;
+  .download-wrap {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    a {
+      border: none;
+      background-color: transparent;
+      color: $theme-light-text;
+      text-decoration: none;
+    }
+    .download-icon {
+      margin-left: 5px;
+      filter: brightness(0) invert(1);
+    }
+  }
+  .theme-change-wrap {
+    .theme-icon-outside {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      padding: 10px;
+      background: radial-gradient(circle at 50% 50%, #ffffff, #eaac8b);
+      // background: radial-gradient(circle at 50% 50%, #ffffff, #ff66998f);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      &.d-block {
+        display: block;
+      }
+      .theme-icon {
+        color: $color-400;
+        display: flex;
+        margin: 0 auto;
+        &.close {
+          display: none;
+        }
+        &.open {
+          display: block;
+        }
+      }
+    }
+  }
+}
