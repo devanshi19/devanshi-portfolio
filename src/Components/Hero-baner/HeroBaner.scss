@@ -1,0 +1,58 @@
+.baner-wrap {
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .baner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      font-size: 95px;
+      color: $color-500;
+    }
+    h3 {
+      font-size: 80px;
+      color: $color-300;
+    }
+    p {
+      margin-top: 10px;
+      color: $theme-text-color;
+    }
+    animation: fadeInUp 5s ease forwards;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.vertical-navbar {
+  ul {
+    list-style: none;
+    li {
+      writing-mode: vertical-lr;
+      margin-bottom: 10px;
+      font-family: "Chelsea Market", system-ui;
+      a {
+        text-decoration: none;
+        color: $color-400;
+      }
+    }
+  }
+  &::after {
+    display: block;
+    content: "";
+    width: 2px;
+    height: 2rem;
+    background: $color-400;
+    margin: 0 auto;
+  }
+}

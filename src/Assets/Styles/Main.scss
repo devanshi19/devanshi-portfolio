@@ -1,0 +1,7 @@
+@import "../Styles/Common.scss";
+.light {
+  @import "../Styles/light-theme-files.scss";
+}
+.dark {
+  @import "../Styles/dark-theme-files.scss";
+}
