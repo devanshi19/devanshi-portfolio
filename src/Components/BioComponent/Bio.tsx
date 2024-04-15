@@ -1,7 +1,7 @@
 import React from "react";
 const Bio = () => {
   const langData = ["JavaScript", "HTML", "CSS", "SASS"];
-  const frameWorkData = ["React.js", "Bootstrap", "SonarQube", "JEST"];
+  const frameWorkData = ["React.js", "Next.js","Tailwind","Bootstrap", "SonarQube", "JEST"];
   const toolsData = ["Git", "Postman", "Electron", "VScode", "Swagger"];
   return (
     <div className="bio-wrap" id="about">
