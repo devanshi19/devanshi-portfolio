@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 const Contact = () => {
@@ -9,7 +9,7 @@ const Contact = () => {
     message: "",
   });
   //Handle form Data
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 

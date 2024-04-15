@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { themeContext, ThemeContextType } from "../../App";
 import { GoSun, GoMoon } from "react-icons/go";
 import { GoDownload } from "react-icons/go";
-import CV from "../../Assets/cv.pdf";
+import CV from "../../cv.pdf";
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
   const context = useContext(themeContext);
