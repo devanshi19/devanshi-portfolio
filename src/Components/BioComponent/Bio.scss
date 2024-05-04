@@ -5,12 +5,26 @@
   padding: 45px 45px 0px 45px;
   position: relative;
   height: 240px;
+  @include for-phone {
+    padding: 40px 40px 0px 40px;
+  }
+  @include for-small-phone {
+    padding: 25px 25px 0px 25px;
+  }
   .bio-content {
     color: $theme-light-text;
     h6 {
       font-size: 20px;
       margin-bottom: 10px;
       text-align: center;
+      @include for-phone {
+        font-size: 20px;
+        margin-bottom: 6px;
+      }
+      @include for-small-phone {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
     }
     p {
       text-align: center;
@@ -24,14 +38,12 @@
       left: 50%;
       width: 90%;
       transform: translate(-50%, -50%);
-      h2 {
-        font-size: 60px;
-        margin: 20px 0px;
+      @include for-phone {
+        width: 100%;
       }
       .card-parent {
         display: flex;
         align-items: center;
-
         .card-wrap {
           position: relative;
           width: 33%;
@@ -43,6 +55,11 @@
           padding: 15px 0px;
           overflow: hidden;
           color: #212121;
+          @include for-small-phone {
+            margin: 0 5px;
+            padding: 5px 0px;
+            width: 50%;
+          }
           .card-color-bg {
             position: absolute;
             top: -61px;
@@ -56,7 +73,7 @@
           }
           h4 {
             display: block;
-            font-size: 20px;
+            // font-size: 20px;
             margin: 10px 0px;
             z-index: 2;
             position: relative;
@@ -69,6 +86,12 @@
             z-index: 2;
             li {
               margin: 5px 0px;
+              @include for-phone {
+                font-size: 15px;
+              }
+              @include for-small-phone {
+                font-size: 14px;
+              }
             }
           }
           &:hover {
