@@ -70,6 +70,39 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+// Mixins for responsive code
+@mixin for-small-phone {
+  @media (max-width: 440px) {
+    @content;
+  }
+}
+@mixin for-phone {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin for-tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin for-large-desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-xx-large-desktop {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -87,22 +120,71 @@ h1 {
   font-size: 24px;
 }
 h2 {
-  font-size: 20px;
+  font-size: 95px;
+  @include for-large-desktop {
+    font-size: 85px;
+  }
+  @include for-desktop {
+    font-size: 75px;
+  }
+  @include for-tablet {
+    font-size: 55px;
+  }
+  @include for-phone {
+    font-size: 35px;
+  }
 }
 h3 {
-  font-size: 16px;
+  font-size: 80px;
+  @include for-large-desktop {
+    font-size: 70px;
+  }
+  @include for-desktop {
+    font-size: 60px;
+  }
+  @include for-tablet {
+    font-size: 50px;
+  }
+  @include for-phone {
+    font-size: 40px;
+    text-align: center;
+  }
 }
 h4 {
-  font-size: 12px;
+  font-size: 20px;
+  @include for-large-desktop {
+    font-size: 18px;
+  }
+  @include for-desktop {
+    font-size: 16px;
+  }
+  @include for-tablet {
+    font-size: 15px;
+  }
+  @include for-phone {
+    font-size: 15px;
+  }
+  @include for-small-phone {
+    font-size: 12px;
+  }
 }
 h5,
 h6 {
-  font-size: 10px;
+  font-size: 20px;
 }
 p {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.01em;
+  @include for-tablet {
+    font-size: 15px;
+  }
+  @include for-phone {
+    font-size: 14px;
+  }
+  @include for-small-phone {
+    font-size: 13px;
+  }
 }
 .light {
   body {
@@ -114,6 +196,24 @@ p {
   max-width: 1280px;
   padding: 0 32px;
   margin: 0 auto;
+  @include for-xx-large-desktop {
+    max-width: 1320px;
+  }
+  @include for-large-desktop {
+    max-width: 1140px;
+  }
+  @include for-desktop {
+    max-width: 960px;
+    padding: 0 15px;
+  }
+  @include for-phone {
+    max-width: 720px;
+    padding: 0 15px;
+  }
+  @include for-phone {
+    max-width: 540px;
+    padding: 0 15px;
+  }
 }
 .container-large {
   width: 100%;

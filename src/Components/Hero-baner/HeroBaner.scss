@@ -9,11 +9,11 @@
     justify-content: center;
     flex-direction: column;
     h2 {
-      font-size: 95px;
+      // font-size: 95px;
       color: $color-500;
     }
     h3 {
-      font-size: 80px;
+      // font-size: 80px;
       color: $color-300;
     }
     p {
@@ -47,7 +47,7 @@
       }
     }
   }
-  &::after { 
+  &::after {
     display: block;
     content: "";
     width: 2px;
